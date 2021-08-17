@@ -1,0 +1,214 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+nav {
+    height: 10vh;
+    background-color: rgba(57, 58, 59, 0.575);
+    width: 100%;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+}
+
+.headTitle {
+    margin-left: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    transform: translate(-20px, -50%);
+    transition: opacity 240ms ease;
+    letter-spacing: 2.5px;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    height: 100%;
+    width: 40%;
+    margin-left: auto;
+}
+
+.navlinks li {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease;
+}
+
+.navlinks li:hover {
+    background-color: rgba(252, 162, 17, 0.5);
+    transition: all 250ms ease;
+}
+
+.navlink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.966), rgba(0, 0, 0, 0.4)), url("https://cdnuploads.aa.com.tr/uploads/Contents/2021/01/11/thumbs_b_c_085fcbed5e3a34131b6b112d8e52981f.jpg?v=132420");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.text-header {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.text-subheader {
+    font-size: 1.25em;
+    margin: 1em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.bold-text{
+    color: #fca211;
+}
+
+#donate-btn {
+    font-size: 16px;
+    padding: 16px;
+    margin: 12px;
+    margin-top: 15px;
+    background-color: rgba(252, 162, 17, 0.7);
+    border: none;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 300ms ease;
+}
+
+#donate-btn:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 2rem 5rem 0 rgba(252, 162, 17, 0.5);
+    transition: 300ms ease;
+}
+
+#donate:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .animate1 {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    .animate2 {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 300ms ease;
+    }
+    .nav-line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    .text-header {
+        font-size: 2em;
+        transition: all 500ms 0.4s;
+    }
+    .text-subheader {
+        transition: all 500ms 0.6s;
+    }
+    .ham {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 10;
+    }
+    .navlinks {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(20, 33, 61, 0.85);
+        flex-direction: column;
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .navlinks.open {
+        clip-path: circle(1200px at 90% -20%);
+        -webkit-clip-path: circle(1200px at 90% -20%);
+        pointer-events: all;
+    }
+    .navlinks li {
+        opacity: 0;
+    }
+    .navlinks li a {
+        font-size: 25px;
+    }
+    .navlinks li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .navlinks li:nth-child(2) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .navlinks li:nth-child(3) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .navlinks li:nth-child(4) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .navlinks li.fade{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .headTitle {
+        font-size: 1em;
+    }
+    .text-header {
+        font-size: 1.5em;
+    }
+    .text-subheader {
+        margin-top: 1rem;
+        font-size: 0.5em;
+    }
+}
