@@ -2,7 +2,7 @@ main {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/thankyou.bg");
+    url("../images/thankyou-bg.png");
   background-size: cover;
   background-position: center;
 }
